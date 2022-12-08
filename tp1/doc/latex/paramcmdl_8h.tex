@@ -1,0 +1,156 @@
+\hypertarget{paramcmdl_8h}{}\section{paramcmdl.\+h File Reference}
+\label{paramcmdl_8h}\index{paramcmdl.\+h@{paramcmdl.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for paramcmdl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{paramcmdl_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{paramcmdl_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionTParamValue}{T\+Param\+Value}
+\begin{DoxyCompactList}\small\item\em union permettant de manipuler un entier/reel/chaine \end{DoxyCompactList}\item 
+struct \hyperlink{structTParamDef}{T\+Param\+Def}
+\begin{DoxyCompactList}\small\item\em represente un parametre de la ligne de commande (nom,type,valeur...) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5}{T\+Param\+Type} \{ \hyperlink{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5a8d6edc98669af667cc9e31340845978a}{P\+Tentier}, 
+\hyperlink{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5aea24482a7d983b9b03681bb4bb45be09}{P\+Treel}, 
+\hyperlink{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5abd88632411744fe81117441047cb065a}{P\+Tchaine}
+ \}\begin{DoxyCompactList}\small\item\em Constantes pour le type des parametres de la ligne de commande. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{paramcmdl_8h_a09f083d05cb2f8560fc6976719c7b443}{Valeur\+Param\+To\+String} (\hyperlink{structTParamDef}{T\+Param\+Def} $\ast$\+\_\+tab\+Param, const int \+\_\+index)
+\begin{DoxyCompactList}\small\item\em fonction qui transforme la valeur d\textquotesingle{}un parametre en chaine de caractere \end{DoxyCompactList}\item 
+void \hyperlink{paramcmdl_8h_a22d0708077876d73979d6880dc7bfe4d}{Print\+Param} (\hyperlink{structTParamDef}{T\+Param\+Def} $\ast$\+\_\+tab\+Param, const int \+\_\+nb\+Param)
+\begin{DoxyCompactList}\small\item\em fonction qui affiche a l\textquotesingle{}ecran les parametre, leur type et leur valeur \end{DoxyCompactList}\item 
+int \hyperlink{paramcmdl_8h_a9468b57ddf26450a9adb40b155fb1c16}{Read\+Param\+From\+Command\+Line} (\hyperlink{structTParamDef}{T\+Param\+Def} $\ast$\+\_\+tab\+Param, const int \+\_\+nb\+Param, const int \+\_\+argc, const char $\ast$\+\_\+argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em fonction qui analyse la ligne de commande pour en extraire des valeurs pour les parametres \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{paramcmdl_8h_a45f6ef32ea85374f1fccef0bf09dd548}{Param\+Type\+Chaine} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5}\label{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5}} 
+\index{paramcmdl.\+h@{paramcmdl.\+h}!T\+Param\+Type@{T\+Param\+Type}}
+\index{T\+Param\+Type@{T\+Param\+Type}!paramcmdl.\+h@{paramcmdl.\+h}}
+\subsubsection{\texorpdfstring{T\+Param\+Type}{TParamType}}
+{\footnotesize\ttfamily enum \hyperlink{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5}{T\+Param\+Type}}
+
+
+
+Constantes pour le type des parametres de la ligne de commande. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Tentier@{P\+Tentier}!paramcmdl.\+h@{paramcmdl.\+h}}\index{paramcmdl.\+h@{paramcmdl.\+h}!P\+Tentier@{P\+Tentier}}}\mbox{\Hypertarget{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5a8d6edc98669af667cc9e31340845978a}\label{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5a8d6edc98669af667cc9e31340845978a}} 
+P\+Tentier&un nombre entier \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Treel@{P\+Treel}!paramcmdl.\+h@{paramcmdl.\+h}}\index{paramcmdl.\+h@{paramcmdl.\+h}!P\+Treel@{P\+Treel}}}\mbox{\Hypertarget{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5aea24482a7d983b9b03681bb4bb45be09}\label{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5aea24482a7d983b9b03681bb4bb45be09}} 
+P\+Treel&un nombre reel \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+Tchaine@{P\+Tchaine}!paramcmdl.\+h@{paramcmdl.\+h}}\index{paramcmdl.\+h@{paramcmdl.\+h}!P\+Tchaine@{P\+Tchaine}}}\mbox{\Hypertarget{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5abd88632411744fe81117441047cb065a}\label{paramcmdl_8h_a07d4e5a29d675892ddc5f377533c06a5abd88632411744fe81117441047cb065a}} 
+P\+Tchaine&une chaine de caracteres \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{paramcmdl_8h_a22d0708077876d73979d6880dc7bfe4d}\label{paramcmdl_8h_a22d0708077876d73979d6880dc7bfe4d}} 
+\index{paramcmdl.\+h@{paramcmdl.\+h}!Print\+Param@{Print\+Param}}
+\index{Print\+Param@{Print\+Param}!paramcmdl.\+h@{paramcmdl.\+h}}
+\subsubsection{\texorpdfstring{Print\+Param()}{PrintParam()}}
+{\footnotesize\ttfamily void Print\+Param (\begin{DoxyParamCaption}\item[{\hyperlink{structTParamDef}{T\+Param\+Def} $\ast$}]{\+\_\+tab\+Param,  }\item[{const int}]{\+\_\+nb\+Param }\end{DoxyParamCaption})}
+
+
+
+fonction qui affiche a l\textquotesingle{}ecran les parametre, leur type et leur valeur 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tab\+Param} & tableau des parametres de la ligne de commande \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+nb\+Param} & taille du tableau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+neant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{paramcmdl_8h_a9468b57ddf26450a9adb40b155fb1c16}\label{paramcmdl_8h_a9468b57ddf26450a9adb40b155fb1c16}} 
+\index{paramcmdl.\+h@{paramcmdl.\+h}!Read\+Param\+From\+Command\+Line@{Read\+Param\+From\+Command\+Line}}
+\index{Read\+Param\+From\+Command\+Line@{Read\+Param\+From\+Command\+Line}!paramcmdl.\+h@{paramcmdl.\+h}}
+\subsubsection{\texorpdfstring{Read\+Param\+From\+Command\+Line()}{ReadParamFromCommandLine()}}
+{\footnotesize\ttfamily int Read\+Param\+From\+Command\+Line (\begin{DoxyParamCaption}\item[{\hyperlink{structTParamDef}{T\+Param\+Def} $\ast$}]{\+\_\+tab\+Param,  }\item[{const int}]{\+\_\+nb\+Param,  }\item[{const int}]{\+\_\+argc,  }\item[{const char $\ast$}]{\+\_\+argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+fonction qui analyse la ligne de commande pour en extraire des valeurs pour les parametres 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em \+\_\+tab\+Param} & tableau des parametres de la ligne de commande \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+nb\+Param} & taille du tableau \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+argc} & nombre d\textquotesingle{}arguments passes sur la ligne de commande \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+argv} & tableau qui contient les chaines de caracteres passees en arguments du programme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$>$=0 \+: nombre de parametres mis a jour, $<$0 \+: erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{paramcmdl_8h_a09f083d05cb2f8560fc6976719c7b443}\label{paramcmdl_8h_a09f083d05cb2f8560fc6976719c7b443}} 
+\index{paramcmdl.\+h@{paramcmdl.\+h}!Valeur\+Param\+To\+String@{Valeur\+Param\+To\+String}}
+\index{Valeur\+Param\+To\+String@{Valeur\+Param\+To\+String}!paramcmdl.\+h@{paramcmdl.\+h}}
+\subsubsection{\texorpdfstring{Valeur\+Param\+To\+String()}{ValeurParamToString()}}
+{\footnotesize\ttfamily char$\ast$ Valeur\+Param\+To\+String (\begin{DoxyParamCaption}\item[{\hyperlink{structTParamDef}{T\+Param\+Def} $\ast$}]{\+\_\+tab\+Param,  }\item[{const int}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+fonction qui transforme la valeur d\textquotesingle{}un parametre en chaine de caractere 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tab\+Param} & tableau des parametres de la ligne de commande \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & indice du parametre a considerer dans le tableau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+une nouvelle chaine (qu\textquotesingle{}il faudra libérer par la suite) 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{paramcmdl_8h_a45f6ef32ea85374f1fccef0bf09dd548}\label{paramcmdl_8h_a45f6ef32ea85374f1fccef0bf09dd548}} 
+\index{paramcmdl.\+h@{paramcmdl.\+h}!Param\+Type\+Chaine@{Param\+Type\+Chaine}}
+\index{Param\+Type\+Chaine@{Param\+Type\+Chaine}!paramcmdl.\+h@{paramcmdl.\+h}}
+\subsubsection{\texorpdfstring{Param\+Type\+Chaine}{ParamTypeChaine}}
+{\footnotesize\ttfamily char$\ast$ Param\+Type\+Chaine\mbox{[}$\,$\mbox{]}}
+
+constante chaine de caracteres pour l\textquotesingle{}affichage des types 
