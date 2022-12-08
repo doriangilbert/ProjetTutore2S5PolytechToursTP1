@@ -61,16 +61,15 @@ typedef struct
 
 char *ValeurParamToString(TParamDef *_tabParam, const int _index)
 {
-  if (_tabParam[_index].type = PTchaine)
+  if (_tabParam[_index].type == PTchaine)
   {
     char *buffer2 = malloc(sizeof(char *) * strlen(_tabParam[_index].valeur.chaine));
     strcpy(buffer2, _tabParam[_index].valeur.chaine);
     return buffer2;
   }
-  else if (_tabParam[_index].type = PTentier)
+  else if (_tabParam[_index].type == PTentier)
   {
-    int n = log10(_tabParam[_index].valeur.entier) + 1;
-    char *buffer1 = malloc(sizeof(int) * n);
+    char *buffer1 = malloc(sizeof(int));
     sprintf(buffer1, "%d", _tabParam[_index].valeur.entier);
     return buffer1;
   }
@@ -98,16 +97,17 @@ void PrintParam(TParamDef *_tabParam, const int _nbParam)
     printf("-%c %s ", _tabParam[i].lettre, _tabParam[i].nom);
     if (_tabParam[i].type == PTentier)
     {
-      printf("(entier) [%d]", _tabParam[i].valeur.entier);
+      printf("(entier) ");
     }
     else if (_tabParam[i].type == PTreel)
     {
-      printf("(reel) [%f]", _tabParam[i].valeur.reel);
+      printf("(reel) ");
     }
     else if (_tabParam[i].type == PTchaine)
     {
-      printf("(chaine) [%s]", _tabParam[i].valeur.chaine);
+      printf("(chaine) ");
     }
+    printf("[%s]",ValeurParamToString(_tabParam,i));
     printf("\n");
   }
 }
